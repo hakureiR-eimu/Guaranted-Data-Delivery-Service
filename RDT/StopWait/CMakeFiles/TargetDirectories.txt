@@ -1,0 +1,3 @@
+/home/usami/workU/GBN-SR-TCP/RDT/StopWait/CMakeFiles/stop_wait.dir
+/home/usami/workU/GBN-SR-TCP/RDT/StopWait/CMakeFiles/edit_cache.dir
+/home/usami/workU/GBN-SR-TCP/RDT/StopWait/CMakeFiles/rebuild_cache.dir
