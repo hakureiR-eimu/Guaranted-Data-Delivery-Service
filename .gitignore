@@ -34,3 +34,7 @@
 # Project files
 bin/
 build/
+.cache/
+
+# reference
+reference/*

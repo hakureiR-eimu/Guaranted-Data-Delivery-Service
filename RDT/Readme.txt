@@ -1,5 +1,5 @@
-1：libnetsim.a是网络模拟环境的静态库文件
+1锛歭ibnetsim.a鏄綉缁滄ā鎷熺幆澧冪殑闈欐�佸簱鏂囦欢
 
-2：编译StopWait工程时，把libnetsim.a放在工程根目录的lib子目录下
+2锛氱紪璇慡topWait宸ョ▼鏃讹紝鎶妉ibnetsim.a鏀惧湪宸ョ▼鏍圭洰褰曠殑lib瀛愮洰褰曚笅
 
-3：GBN、SR、简化TCP的工程目录和StopWait工程一样，都要把libnetsim.a放在工程根目录的lib子目录下
+3锛欸BN銆丼R銆佺畝鍖朤CP鐨勫伐绋嬬洰褰曞拰StopWait宸ョ▼涓�鏍凤紝閮借鎶妉ibnetsim.a鏀惧湪宸ョ▼鏍圭洰褰曠殑lib瀛愮洰褰曚笅
