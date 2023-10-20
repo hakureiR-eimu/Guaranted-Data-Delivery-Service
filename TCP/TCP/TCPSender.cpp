@@ -1,27 +1,27 @@
 #include "stdafx.h"
 #include "Global.h"
-#include "StopWaitRdtSender.h"
+#include "TCPSender.h"
 
 
-StopWaitRdtSender::StopWaitRdtSender():base(0),expectSequenceNumberSend(0),waitingState(false)
+TCPSender::TCPSender():base(0),expectSequenceNumberSend(0),waitingState(false)
 {
 }
 
 
-StopWaitRdtSender::~StopWaitRdtSender()
+TCPSender::~TCPSender()
 {
 }
 
 
 
-bool StopWaitRdtSender::getWaitingState() {
+bool TCPSender::getWaitingState() {
 	return waitingState;
 }
 
 
 
 
-bool StopWaitRdtSender::send(const Message &message) {
+bool TCPSender::send(const Message &message) {
 	if (this->waitingState) { //发送方处于等待确认状态
 		return false;
 	}
@@ -54,7 +54,7 @@ bool StopWaitRdtSender::send(const Message &message) {
 	return true;
 }
 
-void StopWaitRdtSender::receive(const Packet& ackPkt) {
+void TCPSender::receive(const Packet& ackPkt) {
 
 			//检查校验和是否正确
 	int checkSum = pUtils->calculateCheckSum(ackPkt);
@@ -118,7 +118,7 @@ void StopWaitRdtSender::receive(const Packet& ackPkt) {
 	//}	
 }
 
-void StopWaitRdtSender::timeoutHandler(int seqNum) {
+void TCPSender::timeoutHandler(int seqNum) {
 	//唯一一个定时器,无需考虑seqNum
 	cout << "发送超时" << endl;
 	pns->stopTimer(SENDER, seqNum);

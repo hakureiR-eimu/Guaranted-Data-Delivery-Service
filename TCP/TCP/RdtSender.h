@@ -3,7 +3,7 @@
 
 #include "DataStructure.h"
 //定义RdtSender抽象类，规定了必须实现的三个接口方法
-//具体的子类比如StopWaitRdtSender、GBNRdtSender必须给出这三个方法的具体实现
+//具体的子类比如TCPSender、GBNRdtSender必须给出这三个方法的具体实现
 //只考虑单向传输，即发送方只发送数据和接受确认
 struct  RdtSender
 {

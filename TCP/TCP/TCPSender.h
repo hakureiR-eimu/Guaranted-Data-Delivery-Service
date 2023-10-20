@@ -1,7 +1,7 @@
 #ifndef STOP_WAIT_RDT_SENDER_H
 #define STOP_WAIT_RDT_SENDER_H
 #include "RdtSender.h"
-class StopWaitRdtSender :public RdtSender
+class TCPSender :public RdtSender
 {
 private:
 	int base;
@@ -20,8 +20,8 @@ public:
 	void timeoutHandler(int seqNum);					//Timeout handler，将被NetworkServiceSimulator调用
 
 public:
-	StopWaitRdtSender();
-	virtual ~StopWaitRdtSender();
+	TCPSender();
+	virtual ~TCPSender();
 };
 
 #endif

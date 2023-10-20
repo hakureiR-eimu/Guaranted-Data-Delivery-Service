@@ -36,10 +36,10 @@
     <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StopWaitRdtReceiver.h">
+    <ClInclude Include="TCPReceiver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StopWaitRdtSender.h">
+    <ClInclude Include="TCPSender.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
@@ -53,13 +53,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StopWait.cpp">
+    <ClCompile Include="TCP.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StopWaitRdtReceiver.cpp">
+    <ClCompile Include="TCPReceiver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StopWaitRdtSender.cpp">
+    <ClCompile Include="TCPSender.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
