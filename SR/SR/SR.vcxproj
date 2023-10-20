@@ -146,16 +146,16 @@
     <ClInclude Include="RdtReceiver.h" />
     <ClInclude Include="RdtSender.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="StopWaitRdtReceiver.h" />
-    <ClInclude Include="StopWaitRdtSender.h" />
+    <ClInclude Include="SRReceiver.h" />
+    <ClInclude Include="SRSender.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="StopWait.cpp" />
-    <ClCompile Include="StopWaitRdtReceiver.cpp" />
-    <ClCompile Include="StopWaitRdtSender.cpp" />
+    <ClCompile Include="SR.cpp" />
+    <ClCompile Include="SRReceiver.cpp" />
+    <ClCompile Include="SRSender.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

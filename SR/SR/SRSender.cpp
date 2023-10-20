@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Global.h"
-#include "StopWaitRdtSender.h"
+#include "SRSender.h"
 
 
-StopWaitRdtSender::StopWaitRdtSender():base(0),expectSequenceNumberSend(0),waitingState(false)
+SRSender::SRSender():base(0),expectSequenceNumberSend(0),waitingState(false)
 {
 	for (int i = 0; i < Seqlenth; i++) {
 		ACKFlags[i] = false;
@@ -12,20 +12,20 @@ StopWaitRdtSender::StopWaitRdtSender():base(0),expectSequenceNumberSend(0),waiti
 }
 
 
-StopWaitRdtSender::~StopWaitRdtSender()
+SRSender::~SRSender()
 {
 }
 
 
 
-bool StopWaitRdtSender::getWaitingState() {
+bool SRSender::getWaitingState() {
 	return waitingState;
 }
 
 
 
 
-bool StopWaitRdtSender::send(const Message &message) {
+bool SRSender::send(const Message &message) {
 	if (this->waitingState) { //发送方处于等待确认状态
 		return false;
 	}
@@ -55,7 +55,7 @@ bool StopWaitRdtSender::send(const Message &message) {
 	return true;
 }
 
-void StopWaitRdtSender::receive(const Packet& ackPkt) {
+void SRSender::receive(const Packet& ackPkt) {
 
 	int checkSum = pUtils->calculateCheckSum(ackPkt);
 
@@ -100,7 +100,7 @@ void StopWaitRdtSender::receive(const Packet& ackPkt) {
 	
 }
 
-void StopWaitRdtSender::timeoutHandler(int seqNum) {
+void SRSender::timeoutHandler(int seqNum) {
 	//唯一一个定时器,无需考虑seqNum
 	cout << "发送超时" << endl;
 	pns->stopTimer(SENDER, seqNum);

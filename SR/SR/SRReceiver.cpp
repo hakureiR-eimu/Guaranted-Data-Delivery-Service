@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Global.h"
-#include "StopWaitRdtReceiver.h"
+#include "SRReceiver.h"
 
 
-StopWaitRdtReceiver::StopWaitRdtReceiver():NextSeqNum(0),base(0)
+SRReceiver::SRReceiver():NextSeqNum(0),base(0)
 {
 	NextSeqNum = base + N;
 	lastAckPkt.acknum = -1; //初始状态下，上次发送的确认包的确认序号为-1，使得当第一个接受的数据包出错时该确认报文的确认号为-1
@@ -19,11 +19,11 @@ StopWaitRdtReceiver::StopWaitRdtReceiver():NextSeqNum(0),base(0)
 }
 
 
-StopWaitRdtReceiver::~StopWaitRdtReceiver()
+SRReceiver::~SRReceiver()
 {
 }
 
-void StopWaitRdtReceiver::receive(const Packet &packet) {
+void SRReceiver::receive(const Packet &packet) {
 	//检查校验和是否正确
 	int checkSum = pUtils->calculateCheckSum(packet);
 

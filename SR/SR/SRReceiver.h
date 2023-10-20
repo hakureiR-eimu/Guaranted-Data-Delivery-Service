@@ -1,7 +1,7 @@
 #ifndef STOP_WAIT_RDT_RECEIVER_H
 #define STOP_WAIT_RDT_RECEIVER_H
 #include "RdtReceiver.h"
-class StopWaitRdtReceiver :public RdtReceiver
+class SRReceiver :public RdtReceiver
 {
 private:
 	int base;
@@ -10,8 +10,8 @@ private:
 	Packet ReceivedPacket[Seqlenth];		//已发送并等待Ack的数据包
 	bool packetWaitingFlags[Seqlenth];
 public:
-	StopWaitRdtReceiver();
-	virtual ~StopWaitRdtReceiver();
+	SRReceiver();
+	virtual ~SRReceiver();
 
 public:
 	

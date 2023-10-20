@@ -1,4 +1,4 @@
 D:\workD\GBN-SR-TCP\SR\SR\stdafx.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\stdafx.obj
-D:\workD\GBN-SR-TCP\SR\SR\StopWait.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\StopWait.obj
-D:\workD\GBN-SR-TCP\SR\SR\StopWaitRdtReceiver.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\StopWaitRdtReceiver.obj
-D:\workD\GBN-SR-TCP\SR\SR\StopWaitRdtSender.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\StopWaitRdtSender.obj
+D:\workD\GBN-SR-TCP\SR\SR\SR.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\SR.obj
+D:\workD\GBN-SR-TCP\SR\SR\SRReceiver.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\SRReceiver.obj
+D:\workD\GBN-SR-TCP\SR\SR\SRSender.cpp;D:\workD\GBN-SR-TCP\SR\SR\Debug\SRSender.obj
