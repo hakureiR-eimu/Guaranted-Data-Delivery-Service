@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
 	pns->init();
 	pns->setRtdSender(ps);
 	pns->setRtdReceiver(pr);
-	pns->setInputFile("input.txt");
-	pns->setOutputFile("output.txt");
+	pns->setInputFile("D:\\workD\\GBN-SR-TCP\\input.txt");
+	pns->setOutputFile("D:\\workD\\GBN-SR-TCP\\output.txt");
 
 	pns->start();
 
