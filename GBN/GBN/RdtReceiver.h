@@ -4,7 +4,7 @@
 
 #include "DataStructure.h"
 //定义RdtReceiver抽象类，规定了必须实现的一个接口方法
-//具体的子类比如StopWaitRdtReceiver、GBNRdtReceiver必须给出这一个方法的具体实现
+//具体的子类比如GBNReceiver、GBNRdtReceiver必须给出这一个方法的具体实现
 //只考虑单向传输，即接收方只接收数据
 struct  RdtReceiver
 {

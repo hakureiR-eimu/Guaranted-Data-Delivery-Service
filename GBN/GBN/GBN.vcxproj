@@ -146,16 +146,16 @@
     <ClInclude Include="RdtReceiver.h" />
     <ClInclude Include="RdtSender.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="StopWaitRdtReceiver.h" />
-    <ClInclude Include="StopWaitRdtSender.h" />
+    <ClInclude Include="GBNReceiver.h" />
+    <ClInclude Include="GBNSender.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="StopWait.cpp" />
-    <ClCompile Include="StopWaitRdtReceiver.cpp" />
-    <ClCompile Include="StopWaitRdtSender.cpp" />
+    <ClCompile Include="GBN.cpp" />
+    <ClCompile Include="GBNReceiver.cpp" />
+    <ClCompile Include="GBNSender.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

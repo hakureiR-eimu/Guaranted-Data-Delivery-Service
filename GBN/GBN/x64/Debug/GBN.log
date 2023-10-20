@@ -1,0 +1,24 @@
+﻿  stdafx.cpp
+  StopWait.cpp
+  StopWaitRdtReceiver.cpp
+  StopWaitRdtSender.cpp
+  正在生成代码...
+StopWait.obj : error LNK2001: 无法解析的外部符号 "struct Tool * pUtils" (?pUtils@@3PEAUTool@@EA)
+StopWaitRdtReceiver.obj : error LNK2001: 无法解析的外部符号 "struct Tool * pUtils" (?pUtils@@3PEAUTool@@EA)
+StopWaitRdtSender.obj : error LNK2001: 无法解析的外部符号 "struct Tool * pUtils" (?pUtils@@3PEAUTool@@EA)
+StopWait.obj : error LNK2001: 无法解析的外部符号 "struct NetworkService * pns" (?pns@@3PEAUNetworkService@@EA)
+StopWaitRdtReceiver.obj : error LNK2001: 无法解析的外部符号 "struct NetworkService * pns" (?pns@@3PEAUNetworkService@@EA)
+StopWaitRdtSender.obj : error LNK2001: 无法解析的外部符号 "struct NetworkService * pns" (?pns@@3PEAUNetworkService@@EA)
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Message::Message(void)" (??0Message@@QEAA@XZ)，函数 "public: virtual void __cdecl StopWaitRdtReceiver::receive(struct Packet const &)" (?receive@StopWaitRdtReceiver@@UEAAXAEBUPacket@@@Z) 中引用了该符号
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Message::Message(struct Message const &)" (??0Message@@QEAA@AEBU0@@Z)，函数 "public: virtual void __cdecl StopWaitRdtReceiver::receive(struct Packet const &)" (?receive@StopWaitRdtReceiver@@UEAAXAEBUPacket@@@Z) 中引用了该符号
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: virtual __cdecl Message::~Message(void)" (??1Message@@UEAA@XZ)，函数 "public: virtual void __cdecl StopWaitRdtReceiver::receive(struct Packet const &)" (?receive@StopWaitRdtReceiver@@UEAAXAEBUPacket@@@Z) 中引用了该符号
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Packet::Packet(void)" (??0Packet@@QEAA@XZ)，函数 "public: __cdecl StopWaitRdtReceiver::StopWaitRdtReceiver(void)" (??0StopWaitRdtReceiver@@QEAA@XZ) 中引用了该符号
+StopWaitRdtSender.obj : error LNK2001: 无法解析的外部符号 "public: __cdecl Packet::Packet(void)" (??0Packet@@QEAA@XZ)
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Packet::Packet(struct Packet const &)" (??0Packet@@QEAA@AEBU0@@Z)，函数 "public: virtual void __cdecl StopWaitRdtReceiver::receive(struct Packet const &)" (?receive@StopWaitRdtReceiver@@UEAAXAEBUPacket@@@Z) 中引用了该符号
+StopWaitRdtSender.obj : error LNK2001: 无法解析的外部符号 "public: __cdecl Packet::Packet(struct Packet const &)" (??0Packet@@QEAA@AEBU0@@Z)
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: virtual __cdecl Packet::~Packet(void)" (??1Packet@@UEAA@XZ)，函数 "int `public: __cdecl StopWaitRdtReceiver::StopWaitRdtReceiver(void)'::`1'::dtor$1" (?dtor$1@?0???0StopWaitRdtReceiver@@QEAA@XZ@4HA) 中引用了该符号
+StopWaitRdtSender.obj : error LNK2001: 无法解析的外部符号 "public: virtual __cdecl Packet::~Packet(void)" (??1Packet@@UEAA@XZ)
+StopWaitRdtReceiver.obj : error LNK2019: 无法解析的外部符号 "public: virtual __cdecl RdtReceiver::~RdtReceiver(void)" (??1RdtReceiver@@UEAA@XZ)，函数 "int `public: __cdecl StopWaitRdtReceiver::StopWaitRdtReceiver(void)'::`1'::dtor$0" (?dtor$0@?0???0StopWaitRdtReceiver@@QEAA@XZ@4HA) 中引用了该符号
+StopWaitRdtSender.obj : error LNK2019: 无法解析的外部符号 "public: virtual __cdecl RdtSender::~RdtSender(void)" (??1RdtSender@@UEAA@XZ)，函数 "int `public: __cdecl StopWaitRdtSender::StopWaitRdtSender(void)'::`1'::dtor$0" (?dtor$0@?0???0StopWaitRdtSender@@QEAA@XZ@4HA) 中引用了该符号
+netsimlib.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+D:\workD\GBN-SR-TCP\GBN\GBN\x64\Debug\GBN.exe : fatal error LNK1120: 10 个无法解析的外部命令
