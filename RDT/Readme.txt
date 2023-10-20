@@ -1,5 +1,3 @@
-1锛歭ibnetsim.a鏄綉缁滄ā鎷熺幆澧冪殑闈欐�佸簱鏂囦欢
+1：libnetsim.a是网络模拟环境的静态库文件
 
-2锛氱紪璇慡topWait宸ョ▼鏃讹紝鎶妉ibnetsim.a鏀惧湪宸ョ▼鏍圭洰褰曠殑lib瀛愮洰褰曚笅
-
-3锛欸BN銆丼R銆佺畝鍖朤CP鐨勫伐绋嬬洰褰曞拰StopWait宸ョ▼涓�鏍凤紝閮借鎶妉ibnetsim.a鏀惧湪宸ョ▼鏍圭洰褰曠殑lib瀛愮洰褰曚笅
+2：编译StopWait及其他Rdt协议实现工程时，链接libnetsim.a的方式见Rdt实验参考手册
