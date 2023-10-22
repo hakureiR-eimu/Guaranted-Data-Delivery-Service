@@ -19,5 +19,5 @@ public:
 	virtual ~SRSender();
 };
 
-#endif
+
 

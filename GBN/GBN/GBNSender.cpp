@@ -31,9 +31,9 @@ bool GBNSender::send(const Message &message) {
 		}
 		init_flag = 0;
 	}
-	if (expectSequenceNumberSend < base + N) {
+	if (this->expectSequenceNumberSend < base + N) {
 
-		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].acknum = -1; //忽略该字段
+		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].acknum = -1; //忽略ack字段
 		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].seqnum = this->expectSequenceNumberSend;
 		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].checksum = 0;
 		memcpy(this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].payload, message.data, sizeof(message.data));
@@ -45,9 +45,9 @@ bool GBNSender::send(const Message &message) {
 			pns->startTimer(SENDER, Configuration::TIME_OUT, base);			//启动发送基序列方定时器
 		}
 		pns->sendToNetworkLayer(RECEIVER, this->packetWaitingAck[expectSequenceNumberSend % Seqlenth]);								//调用模拟网络环境的sendToNetworkLayer，通过网络层发送到对方
-		expectSequenceNumberSend++;
+		this->expectSequenceNumberSend++;
 		cout << "此报文发送后，expectSequenceNumberSend为" << expectSequenceNumberSend << endl;
-		if (expectSequenceNumberSend == base + N) {
+		if (this->expectSequenceNumberSend == base + N) {
 			this->waitingState = true;//进入等待状态
 		}
 	}
@@ -67,7 +67,6 @@ void GBNSender::receive(const Packet& ackPkt) {
 		pUtils->printPacket("发送方正确收到确认", ackPkt);
 		base = ackPkt.acknum + 1;
 		for (int i = base +N; i < base + 8; i++) {
-			int a = i % Seqlenth;
 			packetWaitingAck[i % Seqlenth].seqnum = -1;
 		}
 		cout << "发送方滑动窗口内容为 " << '[' << ' ';

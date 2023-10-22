@@ -6,7 +6,7 @@ class GBNSender :public RdtSender
 private:
 	int base;
 	int expectSequenceNumberSend;	// 下一个发送序号 
-	int init_flag = 1;
+	int init_flag = 1;				
 	bool waitingState;				// 是否处于等待Ack的状态
 	Packet packetWaitingAck[Seqlenth];		//已发送并等待Ack的数据包
 

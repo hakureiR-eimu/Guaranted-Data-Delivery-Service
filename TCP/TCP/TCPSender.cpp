@@ -1,4 +1,4 @@
-#include "stdafx.h"
+                                                                                                                                                #include "stdafx.h"
 #include "Global.h"
 #include "TCPSender.h"
 
