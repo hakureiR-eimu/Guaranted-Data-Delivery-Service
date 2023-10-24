@@ -5,7 +5,7 @@
 //初始化GBNReceiver类
 GBNReceiver::GBNReceiver():expectSequenceNumberRcvd(0)
 {
-	this->lastAckPkt.acknum = -1; //初始状态下，上次发送的确认包的确认序号为-1，使得当第一个接受的数据包出错时该确认报文的确认号为-1
+	this->lastAckPkt.acknum = -1; 
 	this->lastAckPkt.checksum = 0;
 	this->lastAckPkt.seqnum = -1;	//忽略seq字段
 	for(int i = 0; i < Configuration::PAYLOAD_SIZE;i++){
