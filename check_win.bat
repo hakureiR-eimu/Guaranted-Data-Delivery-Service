@@ -5,8 +5,8 @@
 :: resultname 程序控制台输出重定向文件名
 
 set appname="TCP.exe"
-set inputname="input.txt"
-set outputname="output.txt"
+set inputname="D:\\workD\\GBN-SR-TCP\\input.txt"
+set outputname="D:\\workD\\GBN-SR-TCP\\output.txt"
 set resultname="result.txt"
 
 for /l %%i in (1,1,10) do (

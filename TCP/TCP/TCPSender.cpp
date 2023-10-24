@@ -119,7 +119,7 @@ void TCPSender::receive(const Packet& ackPkt) {
 }
 
 void TCPSender::timeoutHandler(int seqNum) {
-	//唯一一个定时器,无需考虑seqNum
+
 	cout << "发送超时" << endl;
 	pns->stopTimer(SENDER, seqNum);
 	pns->startTimer(SENDER, Configuration::TIME_OUT, seqNum);

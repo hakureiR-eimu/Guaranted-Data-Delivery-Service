@@ -33,8 +33,8 @@ bool GBNSender::send(const Message &message) {
 	}
 	if (this->expectSequenceNumberSend < base + N) {
 
-		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].acknum = -1; //忽略ack字段
-		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].seqnum = this->expectSequenceNumberSend;
+		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].acknum = -1;								//忽略ack字段
+		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].seqnum = this->expectSequenceNumberSend;     //初始化序列号
 		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].checksum = 0;
 		memcpy(this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].payload, message.data, sizeof(message.data));
 		this->packetWaitingAck[expectSequenceNumberSend % Seqlenth].checksum = pUtils->calculateCheckSum(this->packetWaitingAck[expectSequenceNumberSend % Seqlenth]);
@@ -67,14 +67,14 @@ void GBNSender::receive(const Packet& ackPkt) {
 		pUtils->printPacket("发送方正确收到确认", ackPkt);
 		base = ackPkt.acknum + 1;
 		for (int i = base +N; i < base + 8; i++) {
-			packetWaitingAck[i % Seqlenth].seqnum = -1;
+			packetWaitingAck[i % Seqlenth].seqnum = -1;					//初始化下一个窗口的序列号
 		}
 		cout << "发送方滑动窗口内容为 " << '[' << ' ';
 		for (int i = base; i < base + N; i++) {
-			if (packetWaitingAck[i % Seqlenth].seqnum == -1) {
+			if (packetWaitingAck[i % Seqlenth].seqnum == -1) {         //未发
 				cout << '*' << ' ';
 			}
-			else {
+			else {														//已发
 				cout << packetWaitingAck[i % Seqlenth].seqnum << ' ';
 			}
 		}

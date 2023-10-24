@@ -1,2 +1,5 @@
-﻿  TCPSender.cpp
+﻿  TCP.cpp
+  TCPReceiver.cpp
+  TCPSender.cpp
+  正在生成代码...
   TCP.vcxproj -> D:\workD\GBN-SR-TCP\TCP\Debug\TCP.exe

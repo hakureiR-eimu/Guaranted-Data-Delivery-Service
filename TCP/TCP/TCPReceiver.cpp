@@ -32,8 +32,9 @@ void TCPReceiver::receive(const Packet &packet) {
 		memcpy(msg.data, packet.payload, sizeof(packet.payload));
 		pns->delivertoAppLayer(RECEIVER, msg);
 
-		lastAckPkt.acknum = packet.seqnum; //确认序号等于收到的报文序号
-		lastAckPkt.checksum = pUtils->calculateCheckSum(lastAckPkt);
+		this->lastAckPkt.acknum = packet.seqnum; //确认序号等于收到的报文序号
+		this->lastAckPkt.checksum = pUtils->calculateCheckSum(lastAckPkt);
+		
 		pUtils->printPacket("接收方发送确认报文", lastAckPkt);
 		pns->sendToNetworkLayer(SENDER, lastAckPkt);	//调用模拟网络环境的sendToNetworkLayer，通过网络层发送确认报文到对方
 

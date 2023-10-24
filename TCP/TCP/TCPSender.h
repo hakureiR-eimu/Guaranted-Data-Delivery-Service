@@ -7,7 +7,7 @@ private:
 	int base;
 	int expectSequenceNumberSend;	// 下一个发送序号 
 	int init_flag = 1;
-	int ACK_count = 0;
+	int ACK_count = 0;				//增加一个计数器，用于计算ACK的个数
 	int lastack = -1;
 	bool waitingState;				// 是否处于等待Ack的状态
 	Packet packetWaitingAck[Seqlenth];		//已发送并等待Ack的数据包
