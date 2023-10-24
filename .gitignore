@@ -2,6 +2,7 @@
 *.d
 
 debug/*
+.vs/*
 # Compiled Object files
 *.slo
 *.lo
