@@ -3,6 +3,7 @@
 
 debug/*
 .vs/*
+*.pdb
 # Compiled Object files
 *.slo
 *.lo
