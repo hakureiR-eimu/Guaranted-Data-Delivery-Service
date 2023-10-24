@@ -8,8 +8,8 @@
 #include "targetver.h"
 #include <stdio.h>
 #include <tchar.h>
-#define N 4
-#define Seqlenth 8
+#define N 4									//滑动窗口长度
+#define Seqlenth 8							//序号长度
 // TODO: 在此处引用程序需要的其他头文件
 #pragma comment (lib,"netsimlib.lib")
 
